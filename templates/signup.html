@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up- TEST</title>
+</head>
+<body>
+    <h3>{{ msg }}</h3>
+
+    <a href="/">
+        <button type="button">Go back to landing page</button>
+        </a>
+
+    <!-- registration form -->
+
+    <form method="POST" action="signup">
+        <label>Full Name: </label><br>
+        <input type="text" name="fullname" required>
+        <br>
+        <label>Email: </label><br>
+        <input type="text" name="email" required>
+        <br>
+        <label>Username(Must be unique)</label><br>
+        <input type="text" name="username" required>
+        <br>
+        <label>Password</label><br>
+        <input type="password" name="password" required>
+        <br><br>
+        <label>Initial Capital:</label><br>
+        <input type="number" name="initcap" required>
+        <br>
+        <label>Broker:</label><br>
+        <input type="radio" id="zerodha" name="broker" value="Zerodha">
+        <label for="zerodha">Zerodha</label><br>
+        <input type="radio" id="upstox" name="broker" value="Upstox">
+        <label for="upstox">Upstox</label><br>
+        <input type="radio" id="angelone" name="broker" value="Angel One">
+        <label for="upstox">Angel One</label><br>
+        <input type="radio" id="others" name="broker" value="Others"
+        <label for="others">Others</label><br>
+        <label>Experience in trading?(in years)</label><br>
+        <input type="number" name="experience">
+        <br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>

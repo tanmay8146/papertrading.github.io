@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TEST</title>
+</head>
+<body>
+    <h3>welcome {{ user }} userid= {{ uid }}</h3>
+
+    <a href="/">
+        <button type="button">Go back</button>
+        </a><br>
+
+    <form method="POST" action="dashboard">
+
+        <label>Capital: </label>
+            <label>{{ capital }} </label>
+        <br><br>
+
+        <label>Date: </label>
+        <input type="date" name="date" required><br>
+
+        <label>Exchange:</label><br>
+        <input type="radio" id="nse" name="exchange" value="NSE">
+        <label for="nse">NSE</label><br>
+        <input type="radio" id="bse" name="exchange" value="BSE">
+        <label for="bse">BSE</label><br>
+
+        <label>Instrument: </label><br>
+        <input type="text" name="instrument" required><br>
+
+        <label>Trade Type: </label><br>
+        <input type="radio" id="regular" name="tradetype" value="regular">
+        <label for="regular">Regular</label><br>
+        <input type="radio" id="cover" name="tradetype" value="cover">
+        <label for="cover">Cover</label><br>
+        <input type="radio" id="amo" name="tradetype" value="amo">
+        <label for="amo">AMO</label><br>
+        <input type="radio" id="iceberg" name="tradetype" value="iceberg">
+        <label for="iceberg">Iceberg</label><br>
+
+        <label>Position Type: </label><br>
+        <input type="radio" id="long" name="positiontype" value="long">
+        <label for="long">LONG</label><br>
+        <input type="radio" id="short" name="positiontype" value="short">
+        <label for="short">SHORT</label><br>
+
+        <label>Quantity: </label>
+        <input type="number" name="quantity" required>
+        <label>Lot size:</label>
+        <input type="number" name="lotsize"><br><br>
+
+        <label>Entry Price: </label>
+        <input type="number" name="entrypoint" required>
+        <label>Target: </label>
+        <input type="number" name="target">
+        <label>Stoploss: </label>
+        <input type="number" name="stoploss"><br><br>
+
+        <label">Product:</label>
+        <input type="radio" id="mis" name="product" value="mis">
+        <label for="mis">Intraday(MIS)</label>
+        <input type="radio" id="cnc" name="product" value="cnc">
+        <label for="cnc">Longterm(CNC)</label><br><br>
+
+        <label>Order</label>
+        <input type="radio" id="pending" name="orderstate" value="pending">
+        <label for="pending">Pending</label>
+        <input type="radio" id="executed" name="orderstate" value="executed">
+        <label for="executed">Executed</label><br><br>
+
+        <label>Exit Price: </label>
+        <input type="number" step="any" name="exitpoint" required><br><br>
+
+
+        <label>Comment: </label>
+        <input type="text" name="comment"<br><br>
+
+        <br>
+        <input type="submit" value="Submit" action="upload"><br><br>
+
+    </form>
+
+        <a href="/tradelog">
+            <button type="button">Trade History</button>
+        </a><br>
+
+        <form method="POST" action="logout">
+        <button type="submit" value="logout">Logout</button>
+    </form>
+</body>
+</html>
