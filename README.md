@@ -1,1 +1,0 @@
-# papertrading.github.io
